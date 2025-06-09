@@ -14,8 +14,8 @@ int main(int argc, char* argv[]) {
     SDL_Rect rect = {200,200,LENGTH,LENGTH};
     SDL_Event event;
 
-    float dx = 1;
-    float dy = 1;
+    double dx = 1;
+    double dy = 1;
 
     int game = 1;
     while (game == 1) {
@@ -29,22 +29,22 @@ int main(int argc, char* argv[]) {
             }
         };
 
-        if ((float)rect.x + (float)LENGTH + dx > (float)WIDTH) {
+        if ((double)rect.x + (double)LENGTH + dx > (double)WIDTH) {
             dx /= abs(dx);
             dy /= abs(dy);
             dx *= -1;
         }
-        if ((float)rect.x + dx < 0.0) {
+        if ((double)rect.x + dx < 0.0) {
             dx /= abs(dx);
             dy /= abs(dy);
             dx *= -1;
         }
-        if ((float)rect.y + (float)LENGTH + dy > (float)HEIGHT) {
+        if ((double)rect.y + (double)LENGTH + dy > (double)HEIGHT) {
             dx /= abs(dx);
             dy /= abs(dy);
             dy *= -1;
         }
-        if ((float)rect.y +  dy < 0.0) {
+        if ((double)rect.y +  dy < 0.0) {
             dx /= abs(dx);
             dy /= abs(dy);
             dy *= -1;
