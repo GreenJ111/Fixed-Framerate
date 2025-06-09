@@ -52,6 +52,21 @@ int main(int argc, char* argv[]) {
         rect.x += (int)dx;
         rect.y += (int)dy;
 
+        dx+= dx*0.01;
+        dy+= dy*0.01;
+        
+        /*
+        if (dx < 0)
+            dx -=1;
+        else
+            dx +=1;
+
+        if (dy < 0)
+            dy -=1;
+        else
+            dy +=1;
+        */
+
         SDL_FillRect(surface, &rect, 0xffffffff);
         SDL_UpdateWindowSurface(window);
 
